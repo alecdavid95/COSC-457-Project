@@ -13,8 +13,8 @@ export class EmployeeService implements serviceInterface {
         this.http.get('/api/employee')
             .map(res => res.json()).subscribe(response => {
             for (let temp of response) {
-                result[count] = {employeeID: temp[0].value, phone: temp[1].value, fname: temp[2].value,
-                    lname: temp[3].value, minit: temp[4].value, zip: temp[5].value, zip: temp[6].value, 
+                result[count] = {employeeID: temp[0].value, position: temp[1].value, phone: temp[2].value, fname: temp[3].value,
+                    lname: temp[4].value, minit: temp[5].value, zip: temp[6].value, 
 					state: temp[7].value, city: temp[8].value, street: temp[9].value};
                 count++;
             }
